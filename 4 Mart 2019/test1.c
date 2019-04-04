@@ -27,12 +27,12 @@ int main(){
 	
 	int i;
 	unsigned long long avg = 0;
-    long long int c[2000];
-    for(i = 0; i < 1000; i++){
-        c[i*2 + 0] = _rdtsc();	
+        long long int c[2000];
+        for(i = 0; i < 1000; i++){
+        	c[i*2 + 0] = _rdtsc();	
 		matrix_mult( o, a, b, a_satir, a_sutun, b_sutun);
 		c[i*2 + 1] = _rdtsc();
-    }
+    	}
 
 	printf("%lld\n", c[2000] - c [0]);
 	for (i = 0; i < 1000; i++){
@@ -44,3 +44,4 @@ int main(){
 	
 	return 0;
 }
+// performans ölçümü ile ilgili kodlardır.
