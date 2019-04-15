@@ -1,6 +1,7 @@
 #include<stdio.h>  
  
-    
+//YardÄ±mcÄ± site : https://www.geeksforgeeks.org/pragma-directive-in-c-c/    
+
 #pragma startup func1  
 #pragma exit func2  
     __attribute__((constructor (100)))void func2();
@@ -24,4 +25,4 @@ int main()
     return 0;  
 } 
 
-//_attributelerin bütün özelliklerini kod örnekleri ile raporla
+//_attributelerin bÃ¼tÃ¼n Ã¶zelliklerini kod Ã¶rnekleri ile raporla
