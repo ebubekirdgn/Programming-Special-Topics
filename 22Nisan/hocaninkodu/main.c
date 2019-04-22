@@ -6,11 +6,11 @@
 
 int tasi(char **si,char **sj)
 {
-	if(*(si)!=255 && *((*sj)+1)!=255)
+	if((*(si)!=255 && *((*sj)+1)!=-1)&& (*(*si) > *(*sj)))
 	{
 		push((*sj),pop((*si)));
 		return 0;			
-	}
+	} 
 	return 1;
 }
 
@@ -30,14 +30,15 @@ int main(void) {
 	tasi(&s0,&s2);
 	tasi(&s0,&s1);
 	tasi(&s2,&s1);
+	if(tasi(&s0,&s2)) printf("s2 s0dan daha kucuk\n");
 	tasi(&s0,&s2);
 	tasi(&s1,&s0);
 	tasi(&s1,&s2);
 	tasi(&s0,&s2);
-	
+	if(tasi(&s0,&s2))
+		printf("s2 dolu!!\n");
 	int i;
 	for(i=0;i<3;i++)
 		printf("%c\n",*(s2--));
  	return 0;
 }
-
