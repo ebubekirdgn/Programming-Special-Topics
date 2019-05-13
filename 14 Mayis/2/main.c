@@ -3,7 +3,7 @@
 #include <x86intrin.h>
 
 
-	//_rdtsc() işlemcideki zaman değerini alır.
+	//_rdtsc() iÅŸlemcideki zaman deÄŸerini alÄ±r.
 static int cmp_int(const void*a,const void*b)
 {
 	if(*(int *)a < *(int *)b) return -1;
@@ -57,6 +57,8 @@ int main(void) {
 
 	printf("Sirali %d : %lld \n",sum,at1>>4);
 
-	
+
+	//	SpekÃ¼latif expection var burada
+
 	return 0;
 }
