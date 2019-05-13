@@ -3,24 +3,25 @@
 #include<x86intrin.h>
 
 
-// 2^20 * 2 ^20 = 2 ^ 40 tane matris oluşuyor.
+// 2^20 * 2 ^20 = 2 ^ 40 tane matris oluÃ¾uyor.
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 
 /*
-	Günümüz işlemcilerinde hafıza hemen kullanılmıyor.Önbellek kulllanırlar.
+	GÃ¼nÃ¼mÃ¼z iÃ¾lemcilerinde hafÃ½za hemen kullanÃ½lmÃ½yor.Ã–nbellek kulllanÃ½rlar.
 	
 	RAM   -> (2^10 * 2^10 * 4 = 2^22) , (2^12 * 2^12 * 4 = 2^26)
 	L3 3 Mb gibi  -> 2^9 * 2^9 * 4 = 2^18
-	L2 256 kb civarında  -> 2^8 * 2^8 * 4 = 2^18
+	L2 256 kb civarÃ½nda  -> 2^8 * 2^8 * 4 = 2^18
 	L1 sadece 32 kb  -> 2^6 * 2^6 * 4 = 2^14
 	CPU
+	Burada geÃ§iÅŸlerde yavaslama oldukca bi sonrakine gecilir ve en son rame ulaÅŸÄ±lÄ±r.
 	
-	Bu sıra ile en üstten alta dogru iner.
+	Bu sÄ±ra ile en Ã¼stten alta dogru iner.
 	
 	////////////////////////////////////////////
-	Çıktısı #define N (1<<13) için;
+	Ã‡Ã½ktÃ½sÃ½ #define N (1<<13) iÃ§in;
 	
 	124512 (1.00),68 (0.00),171 (0.00);
 	122249 (1.00),101 (0.00),403 (0.00);
@@ -37,7 +38,7 @@
 	222079842 (1.00),751624782 (3.38),1040508542 (4.69);
 	442946284 (1.00),3267124242 (7.38),4158694236 (9.39);	
 	
-	Burada aradaki sıçramalar bizim tamamen belleğimizin kapasitesi ile alakalıdır.
+	Burada aradaki sÃ½Ã§ramalar bizim tamamen belleÃ°imizin kapasitesi ile alakalÃ½dÃ½r.
  	/////////////////////////////////////////////////////
  
 */
@@ -67,7 +68,7 @@ int main(void) {
 	  at0 = _rdtsc();
 	  for(k=0;k<16;k++)
 	  {
-		for(i=0;i<n;i++) //satır tabanlı erişim
+		for(i=0;i<n;i++) //satÃ½r tabanlÃ½ eriÃ¾im
 		{
 			for(j=0;j<n;j+=step)
 			{
@@ -80,7 +81,7 @@ int main(void) {
 		bt0 = _rdtsc();
 		for(k=0;k<16;k++)
 	    {
-			for(i=0;i<n;i+=step)//sütun tabanlı erişim
+			for(i=0;i<n;i+=step)//sÃ¼tun tabanlÃ½ eriÃ¾im
 			{
 				for(j=0;j<n;j++)
 				{
@@ -93,7 +94,7 @@ int main(void) {
 		ct0 = _rdtsc();
 		for(k=0;k<16;k++)
 	    {
-			for(i=0;i<n;i++)//rastgele erişim
+			for(i=0;i<n;i++)//rastgele eriÃ¾im
 			{
 				for(j=0;j<n;j++)
 				{
