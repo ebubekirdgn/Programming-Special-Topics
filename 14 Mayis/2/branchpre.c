@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <x86intrin.h>
 
+/*Burada işlemcilerin bir if geldiğinde nasıl karar verdiğini gözlemledik.
 
+*/
 	//_rdtsc() işlemcideki zaman değerini alır.
 static int cmp_int(const void*a,const void*b)
 {
