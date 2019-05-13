@@ -3,6 +3,13 @@
 #include <x86intrin.h>
 
 /*Burada işlemcilerin bir if geldiğinde nasıl karar verdiğini gözlemledik.
+Sınavda herseyden sorumluyuz.
+
+Konular yarı yarıya sorarım dedi 
+
+branchpreden soru gelebilir.
+
+makroları gördük. proccessinge if koyma.
 
 */
 	//_rdtsc() işlemcideki zaman değerini alır.
