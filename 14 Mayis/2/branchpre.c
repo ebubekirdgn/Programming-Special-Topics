@@ -8,6 +8,7 @@ Sınavda herseyden sorumluyuz.
 Konular yarı yarıya sorarım dedi 
 
 branchpreden soru gelebilir.
+test ve boşluk doldurma olacak.
 
 makroları gördük. proccessinge if koyma.
 
